@@ -23,7 +23,11 @@ def sample(n : int):
 
 # generate the actual data
 x, t = sample(400)
+print(x)
+print(t)
 
-with open('output.npy', 'wb+') as outfile:
+with open('points.npy', 'wb+') as outfile:
     np.save(outfile, x)
+
+with open('labels.npy', 'wb+') as outfile:
     np.save(outfile, t)
