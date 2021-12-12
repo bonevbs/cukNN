@@ -5,3 +5,4 @@ main.x: cuknn.cu
 
 clean:
 	rm *.x
+	rm *.npy

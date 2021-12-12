@@ -3,7 +3,7 @@ import numpy as np
 
 # data will come from a mixture of Gaussians
 K = 3 # number of classes will be 2
-D = 2 # dimension will be 2
+D = 10 # dimension will be 2
 pi = []
 mu = []
 sigma = []
@@ -22,12 +22,13 @@ def sample(n : int):
 
 
 # generate the actual data
-x, t = sample(400)
-print(x)
-print(t)
+x1, t1 = sample(400)
+x2, t2 = sample(10)
+print(x1)
+print(x2)
 
-with open('points.npy', 'wb+') as outfile:
-    np.save(outfile, x)
+with open('refpoints.npy', 'wb+') as outfile:
+    np.save(outfile, x1)
 
-with open('labels.npy', 'wb+') as outfile:
-    np.save(outfile, t)
+with open('qpoints.npy', 'wb+') as outfile:
+    np.save(outfile, x2)
